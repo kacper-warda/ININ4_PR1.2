@@ -8,28 +8,9 @@ public class Main {
         me.lastName = "Nowacki";
         me.pet = new Animal("cat");
 
-        me.pet.feed();
-        me.pet.feed();
-        me.pet.feed();
+        me.car = new Car("Fiat", "bravo", 1.6);
+        me.car.color = "gray";
 
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.feed();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-
-
+        System.out.println(me.car.model);
     }
 }
