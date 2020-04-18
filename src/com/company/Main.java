@@ -13,7 +13,7 @@ public class Main {
 
         Human me = new Human();
         me.firstName = "Adrian";
-        me.lastName = "Warda";
+        me.lastName = "Nowacki";
         me.pet = dog;
 
         me.pet.feed();
