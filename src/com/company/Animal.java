@@ -44,4 +44,8 @@ public class Animal {
             weight -= 0.1;
         }
     }
+
+    public Double getWeight() {
+        return weight;
+    }
 }

@@ -8,9 +8,11 @@ public class Main {
         me.lastName = "Nowacki";
         me.pet = new Animal("cat");
 
-        me.car = new Car("Fiat", "bravo", 1.6);
-        me.car.color = "gray";
+        me.setCar(new Car("Fiat", "bravo", 1.6));
+        me.getCar().color = "gray";
 
-        System.out.println(me.car.model);
+        System.out.println(me.getCar().model);
+
+        System.out.println(me.pet.getWeight());
     }
 }
