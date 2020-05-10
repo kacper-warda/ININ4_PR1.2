@@ -1,12 +1,20 @@
 package com.company;
 
-public class Human {
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
+public class Human extends Animal {
     String firstName;
     String lastName;
     Phone phone;
     Animal pet;
     private Car car;
     private Double salary = 2000.0;
+
+    public Human() {
+        super("homo sapiens");
+        this.weight = 80.0;
+    }
 
 
     public Car getCar() {
@@ -23,5 +31,9 @@ public class Human {
         } else {
             System.out.println("Go to work man");
         }
+    }
+
+    public String toString() {
+        return firstName + " " + lastName + " " + car;
     }
 }

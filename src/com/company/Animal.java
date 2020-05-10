@@ -2,11 +2,11 @@ package com.company;
 
 import java.io.File;
 
-public class Animal {
+public class Animal implements Edible, Saleable {
     final String species;
     String name;
     File pic;
-    private Double weight;
+    protected Double weight;
 
     static final Double DEFAULT_DOG_WEIGHT = 11.0;
     static final Double DEFAULT_LION_WEIGHT = 180.0;
@@ -21,7 +21,6 @@ public class Animal {
         } else {
             weight = DEFAULT_OTHER_WEIGHT;
         }
-
     }
 
     void feed() {
@@ -47,5 +46,24 @@ public class Animal {
 
     public Double getWeight() {
         return weight;
+    }
+
+    public String toString() {
+        return this.species + " " + this.name;
+    }
+
+    @Override
+    public void beEaten() {
+        weight = 0.0;
+        System.out.println("adiooooooos");
+    }
+
+    @Override
+    public void sell() throws Exception {
+        if (this instanceof Human) {
+            throw new Exception("NO SLAVERY!!!");
+        } else {
+            System.out.println("you just sold an Animal " + this.toString());
+        }
     }
 }
