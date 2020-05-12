@@ -4,12 +4,13 @@ import com.company.devices.Car;
 import com.company.devices.Phone;
 
 public class Human extends Animal {
-    String firstName;
-    String lastName;
-    Phone phone;
+    public String firstName;
+    public String lastName;
+    public Phone phone;
     Animal pet;
     private Car car;
     private Double salary = 2000.0;
+    public Double cash = 300.0;
 
     public Human() {
         super("homo sapiens");
@@ -22,6 +23,10 @@ public class Human extends Animal {
     }
 
     public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public void buyANewCarFromFactory(Car car) {
         if (this.salary > car.getPrice()) {
             System.out.println("Gratulacje Confgrats you bought it");
             this.car = car;

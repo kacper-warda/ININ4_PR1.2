@@ -13,7 +13,4 @@ public abstract class Device implements Saleable {
 
     abstract public void turnOn();
 
-    public void sell() {
-        System.out.println("You sold " + this.toString());
-    }
 }

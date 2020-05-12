@@ -1,5 +1,5 @@
 package com.company;
 
 public interface Saleable {
-    void sell() throws Exception;
+    void sell(Human buyer, Human seller, Double price) throws Exception;
 }

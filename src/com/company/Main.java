@@ -3,6 +3,8 @@ package com.company;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
+import java.net.MalformedURLException;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -10,6 +12,7 @@ public class Main {
         me.firstName = "Adrian";
         me.lastName = "Nowacki";
         me.pet = new Animal("cat");
+        me.pet.name = "Simba";
 
         me.setCar(new Car("Fiat", "bravo", 1.6));
         me.getCar().color = "gray";
@@ -41,8 +44,29 @@ public class Main {
         System.out.println(nokia.producer);
 
         try {
-            me.pet.sell();
+            System.out.println("me.cash  " + me.cash);
+            System.out.println("myWife.cash  " + myWife.cash);
+            System.out.println("me.pet " + me.pet);
+            System.out.println("myWife.pet " + myWife.pet);
+
+            me.pet.sell(myWife, me, 50.0);
+
+            System.out.println("me.cash  " + me.cash);
+            System.out.println("myWife.cash  " + myWife.cash);
+            System.out.println("me.pet " + me.pet);
+            System.out.println("myWife.pet " + myWife.pet);
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            nokia.installAnApp("facebook");
+            nokia.installAnApp("messenger", "3.2.4");
+            String[] appNames = {"whatsapp", "instagram"};
+            nokia.installAnApp(appNames);
+
+
+        } catch (MalformedURLException e) {
             e.printStackTrace();
         }
 
